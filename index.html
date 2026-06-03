@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ Toggle Page – jQuery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="faq-wrap">
+  <span class="faq-badge">jQuery  project</span>
+  <h1 class="faq-header">Frequently Asked Questions</h1>
+  <p class="faq-sub">Click any question to reveal the answer. Built with jQuery <code>slideToggle()</code>.</p>
+
+  <button class="expand-all" id="toggleAll">Expand all</button>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <p>What is jQuery and why is it used?</p>
+      <span class="faq-chevron">&#8964;</span>
+    </div>
+    <div class="faq-answer">
+      <p>jQuery is a fast, lightweight JavaScript library that simplifies HTML DOM traversal, event handling, and animation. It wraps complex browser APIs into short, readable methods — what used to take 10 lines of vanilla JS can often be done in one line with jQuery.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <p>What jQuery method powers this toggle?</p>
+      <span class="faq-chevron">&#8964;</span>
+    </div>
+    <div class="faq-answer">
+      <p><code>slideToggle()</code> animates the height of an element between hidden and visible. It automatically switches between <code>slideDown()</code> (expand) and <code>slideUp()</code> (collapse) on each call, creating a smooth accordion effect.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <p>How does jQuery handle events?</p>
+      <span class="faq-chevron">&#8964;</span>
+    </div>
+    <div class="faq-answer">
+      <p>jQuery uses <code>.on(event, handler)</code> or shorthand methods like <code>.click()</code> to bind event listeners. Inside the handler, <code>$(this)</code> refers to the element that triggered the event, making it easy to find related siblings or parents.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <p>What is the difference between <code>hide()</code> and <code>slideUp()</code>?</p>
+      <span class="faq-chevron">&#8964;</span>
+    </div>
+    <div class="faq-answer">
+      <p><code>hide()</code> instantly sets <code>display: none</code> with no animation. <code>slideUp()</code> gradually collapses the element's height to zero before hiding it, producing a smooth animated effect that feels more polished in UI components like accordions.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <p>What is the <code>$(document).ready()</code> pattern?</p>
+      <span class="faq-chevron">&#8964;</span>
+    </div>
+    <div class="faq-answer">
+      <p>It ensures your jQuery code runs only after the full HTML document has loaded and the DOM is ready. The modern shorthand is simply <code>$(function() { ... })</code>. Without it, scripts may try to select elements that don't exist yet.</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
